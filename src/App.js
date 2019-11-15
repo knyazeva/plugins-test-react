@@ -1,26 +1,33 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import ProductSearch from "./components/searchProduct/searchProducts";
+import SelectPlugin from "./components/selectPlugin";
+import SliderPhoto from "./components/sliderPlugin";
+import TestjQuery from "./components/testWithJQuery";
+import SimpleMap from "./components/yandexMapPlugin";
+import PhotoGallery from "./components/photoGalleryPlugin";
+import Calendar from "./components/calendarPlugin";
+import Chart from "./components/chartPlugin";
+import Counter from "./components/reducerCounter";
+import UseSass from "./components/useSass";
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+    return (
+        <div className="App">
+          <ProductSearch />
+          <TestjQuery />
+          <SelectPlugin />
+          <Counter />
+          <SliderPhoto />
+          <UseSass />
+          <SimpleMap/>
+          <PhotoGallery />
+          <Calendar />
+          <Chart />
+        </div>
+    );
+
 }
 
 export default App;
