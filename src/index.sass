@@ -1,0 +1,149 @@
+%arrow-img
+  background: url("/../images/arrow.png") no-repeat
+
+*
+  font-family: Arial
+  margin: 0
+  padding: 0
+body
+  padding: 10px
+h2, h1
+  font-size: 27px
+  margin-bottom: 30px
+h2
+  margin: 50px 0 20px 0
+h4
+  margin: 10px 0
+input[type="text"]
+  padding: 10px
+  font-size: 16px
+  margin-bottom: 20px
+  width: 100%
+  max-width: 500px
+label
+  display: block
+  margin-bottom: 20px
+a:hover
+  text-decoration: none
+table
+  border-collapse: collapse
+  margin-bottom: 30px
+table td
+  border: 1px solid black
+button
+  padding: 10px
+  cursor: pointer
+
+.select
+  margin: 20px 0
+  max-width: 500px
+  input
+    margin-bottom: 0
+
+.slick-slider
+  position: relative
+  margin-bottom: 65px
+  width: 500px
+  .slick-list
+    overflow: hidden
+  .slick-track > div
+    display: inline-block
+    vertical-align: top
+    position: relative
+    z-index: 1!important
+    outline: none
+    text-align: center
+.slick-dots
+  position: absolute
+  right: 0
+  left: 0
+  bottom: -50px
+  z-index: 1
+  text-align: center
+  padding: 0
+  li
+    display: inline-block
+    vertical-align: top
+    margin: 0
+    button
+      color: transparent
+      background: white
+      border: 1px solid grey
+      width: 15px
+      height: 15px
+      border-radius: 50%
+      margin: 0 9px
+      outline: none
+      cursor: pointer
+    &.slick-active button
+      background: #C2C2C2
+
+.slick-arrow
+  cursor: pointer
+  outline: none
+  color: transparent
+  z-index: 3
+  width: 33px
+  height: 39px
+  border: none
+  @extend %arrow-img
+  background-size: 100%
+  top: 50%
+  margin-top: -17px
+  position: absolute
+  &.slick-prev
+    left: 5px
+  &.slick-next
+    right: 5px
+    transform: rotate(180deg)
+
+.slider-photo img
+  height: 200px
+
+.gallery
+  width: 50%
+
+.calendar
+  input
+    margin: 0
+    font-size: 19px
+    width: 100px
+    border-bottom: none
+  table td
+    border: inherit
+    &.CalendarDay__default
+      border: 1px solid #e4e7e7
+
+.DateInput_input
+  width: 100px
+
+
+
+/* Создание миксина с параметрами */
+@mixin text($font, $color, $family)
+  font-size: $font
+  color: $color
+  font-family: $family
+.font-1
+  @include text(30px, blue, Candara)
+.font-2
+  @include text(35px, brown, cursive)
+
+@mixin box-shadow($shadow...)
+  -moz-box-shadow: $shadow
+  -webkit-box-shadow: $shadow
+  box-shadow: $shadow
+
+
+/* Создание с помощью перебора */
+@each $animal, $color in (cat: gray, dog: blue)
+  .#{$animal}-icon
+    @include box-shadow(0px 4px 5px #666, 2px 6px 10px #999)
+    background: $color
+    display: inline-block
+    vertical-align: middle
+    margin-right: 15px
+    padding: 7px 15px
+    color: white
+    @media only screen and (max-width: 1660px)
+      color: red
