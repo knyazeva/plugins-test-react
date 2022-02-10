@@ -5,7 +5,7 @@
   "homepage": "https://knyazeva.github.io/plugins-test-react/",
   "dependencies": {
     "jquery": "^3.4.1",
-    "node-sass": "^4.13.0",
+    "node-sass": "^7.0.0",
     "react": "^16.11.0",
     "react-dates": "^21.3.2",
     "react-dom": "^16.11.0",
